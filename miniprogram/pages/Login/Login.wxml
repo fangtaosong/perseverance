@@ -1,0 +1,96 @@
+<!--pages/Login/Login.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	
+	<view slot="content">登录</view>
+</cu-custom>
+<image src='https://7265-revolver-xr3cc-1300594244.tcb.qcloud.la/EH_MKV60_%5DO%5BBH~%60%5DXLNO8A.png?sign=afa195c50e818364eb6e9a0d10cd26f0&t=1621239814' mode='widthFix' class='png' style='width:100%;'></image>
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 登录微信
+  </view>
+  <view class="action">
+    <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">  </button> 
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+    <button class="cu-btn bg-green shadow" open-type="getUserInfo" bindgetuserinfo="getuserInfo">授权</button>
+    <button class="cu-btn bg-blue shadow margin-left" bindtap="showModal" data-target="DialogModal1">关于权限</button>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">关于权限</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      我们将获取您的头像和账户标识进行自律程度的排序，我们承诺不会将您的信息用在本小程序之外的地方。
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 目标院校
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow margin-left" bindtap="showModal" data-target="DialogModal3">选择</button>
+    <button class="cu-btn bg-yellow shadow margin-left" bindtap="showModal" data-target="DialogModal4">关于院校</button>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='DialogModal4'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">关于院校信息</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      考研宝是一个沉浸考研的微信小程序，我们将获取你意向中的考研院校，并且将进行个性化定制。
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='DialogModal3'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">Modal标题</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      Modal 内容。
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub text-green " bindtap="hideModal">
+        <text class="cuIcon-moneybag"></text>微信支付</view>
+      <view class="action margin-0 flex-sub text-green solid-left" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">确定</view>
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 当前院校
+  </view>
+  <view class="action">
+    
+  </view>
+</view>
+<!-- <button class="button" hover-class="button-hover" open-type="getUserInfo" bindgetuserinfo="getuserInfo">点击授权</button> -->

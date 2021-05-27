@@ -1,0 +1,21 @@
+<template name="postItem">
+ <view class="post-container">
+  <view class="post-author-date">
+   <image class="post-author" src="{{avatar}}"  mode="aspectFill"></image>
+    <text class="post-date">{{date}}</text>
+  </view>
+   <text class="post-title">{{title}}</text>
+   <image class="post-image" src="{{imgSrc}}" mode="aspectFill"></image>
+   <text class="post-content">{{content}}
+   </text>
+   <view class="post-like">
+     <image class="post-like-image" mode="aspectFill"
+     src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/收藏2.png"></image>
+     <text class="post-like-font">{{collection}}</text>
+ 
+     <image class="post-like-image"  mode="aspectFill"
+     src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/看过.png"></image>
+     <text class="post-like-font">{{reading}}</text>
+   </view>
+  </view>
+</template>

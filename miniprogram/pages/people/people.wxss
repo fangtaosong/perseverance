@@ -1,0 +1,66 @@
+/* pages/people/people.wxss *//**index.wxss**/
+
+.UCenter-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+.touxiang{
+  border-radius: 50%;
+  overflow:hidden;
+  display: block;  
+  width: 128rpx;
+  height:128rpx
+}
+.UCenter-bg {
+  /* background-image: url(https://hackwork.oss-cn-shanghai.aliyuncs.com/lesson/weapp/4/bg.png); */
+  background-size: cover;
+  height: 350rpx;
+  display: flex;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.text-xl{
+  padding-left: 20rpx;
+  font-size: 50rpx;
+}
+.z{
+  z-index: 3;
+}
+.text-grey{
+  font-weight: 600;
+}
+.png{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  opacity:0.39
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

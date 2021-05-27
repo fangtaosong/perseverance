@@ -1,0 +1,20 @@
+<!--pages/time/time.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">自律！</view>
+</cu-custom>
+<view class="whole">
+  <image class="background_image" src="{{back_image_url}}" mode="aspectFill"></image>
+  <view class="slo justify-center">
+    <view class="biaoyu justify-center" >
+      {{slogan}}
+    </view>
+  </view>
+  <view class="time"><text class='marright'>{{hours}}:{{minute}}:{{second}}</text></view>
+
+  <view class="button_zone flex solid-bottom padding justify-around">
+      <button class="cu-btn bg-purple lg shadows" bindtap="reload">重新计时</button>
+      <button class="cu-btn bg-cyan lg shadow" bindtap="rollback">结束专注</button>
+</view>
+</view>
+

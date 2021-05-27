@@ -1,0 +1,53 @@
+<!--pages/indexes/indexes.wxml-->
+<cu-custom isBack="{{true}}" bgColor="bg-gradual-blue">
+  <view slot="backText">返回</view>
+  <view slot="content">索引</view>
+</cu-custom>
+<!-- <view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+  </view>
+</view> -->
+<scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true" >
+  <block wx:for="{{list}}" wx:key>
+    <!-- <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view> -->
+    
+    <view class="cu-list menu-avatar no-padding" bindtap="pick" data-index="{{index}}">
+      <view class="cu-item">
+        <view class="cu-avatar xl round leftsight">
+          <image src="{{list[index].logo}}" class="png" mode="aspectFill"></image>
+        </view>
+        <view class="content">
+          <view class="text-grey">{{list[index].name}}</view>
+        </view>
+        <view class="pick" wx:if='{{list[index].pick==="1"}}'>
+        <image src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/fangtaosong/对号.png" class="tick" mode="aspectFill"></image>
+        </view>
+      </view>
+      <!-- <view class="cu-item" wx:for="{{2}}" wx:key wx:for-index="sub">
+        <view class="cu-avatar round lg">{{list[index]}}</view>
+        <view class="content">
+          <view class="text-grey">{{list[index]}}
+            <text class="text-abc">{{list[sub]}}</text>君</view>
+        </view>
+      </view> -->
+    </view>
+  </block>
+</scroll-view>
+<!-- <view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
+  <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove">
+    <view class="indexBar-item" wx:for="{{list}}" wx:key id="{{index}}" bindtouchstart="getCur" bindtouchend="setCur">{{list[index]}}</view>
+  </view>
+</view> -->
+<!--选择显示-->
+<view hidden="{{hidden}}" class="indexToast">
+  {{listCur}}
+</view>
+<view class="cu-bar btn-group INbutton">
+    <button class="cu-btn bg-green shadow-blur round" bindtap="recheck">重选</button>
+    <button class="cu-btn bg-blue shadow-blur round" bindtap="send">提交</button>
+  </view>

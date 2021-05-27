@@ -1,0 +1,25 @@
+<!--先静后动，先样式再数据-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">详情</view>
+</cu-custom>
+<view class="container">
+ <image class="head-image" src="{{postData.imgSrc}}"  mode="aspectFill"></image>
+ <!-- <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic? '/images/music/music-stop.png': '/images/music/music-start.png'}}"></image> -->
+ <view class="author-date">
+ <image class="avatar" src="{{postData.avatar}}"  mode="aspectFill"></image>
+ <text class="author">{{postData.author}}</text>
+ <text class="const-text">发表于</text>
+ <text class="date">{{postData.dateTime}}</text>
+ </view>
+ <text class="title">{{postData.title}}</text>
+ <view class="tool">
+ <view class="circle-img">
+  <image  mode="aspectFill" wx:if="{{collected}}" catchtap="onColletionTap" src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/收藏2.png"></image>
+  <image  mode="aspectFill" wx:else catchtap="onColletionTap" src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/收藏1.png"></image>
+  <image  mode="aspectFill" catchtap="onShareTap" class="share-img" src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/分享.png"></image>
+ </view>
+ <view class="horizon"></view>
+ </view>
+ <text class="detail">{{postData.detail}}</text>
+</view>

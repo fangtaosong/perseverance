@@ -1,0 +1,65 @@
+<!--pages/mygoal/mygoal.wxml-->
+<cu-custom isBack="{{true}}" bgColor="bg-gradual-blue">
+  <view slot="backText">返回</view>
+  <view slot="content">个人信息</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+
+  <!-- 用户 openid -->
+  <view class="UCenter-bg">
+    <view class="cu-avatar xl round margin-left">
+    <open-data class="touxiang" type="userAvatarUrl"></open-data></view>
+    <!-- <view class="cu-avatar xl round margin-left" style="background-image:url({{avatarUrl}});"></view> -->
+   
+    <open-data type="userNickName" class="text-xl">{{nickName}}</open-data>
+    <!-- <image src="https://hackwork.oss-cn-shanghai.aliyuncs.com/lesson/weapp/4/bg.png" class="png" mode="widthFix"></image> -->
+    <!-- <view class="cu-avatar xl round margin-left" style="background-image:url({{avatarUrl}});"></view>
+    <view class="text-xl">{{nickName}}</view> -->
+  </view>
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="title">我的院校</view>
+      <view class="value">我的院校</view>
+      <navigator class="content" url="/pages/indexes/indexes" hover-class="none">
+        <text class="text-grey">请选择</text>
+        <text class="cuIcon-right text-grey"></text>
+      </navigator>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">我的专业</view>
+      <view class="value">我的专业</view>
+      <navigator class="content" url="/pages/indexes/indexes" hover-class="none">
+        <text class="text-grey">请选择</text>
+        <text class="cuIcon-right text-grey"></text>
+      </navigator>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">目标院校</view>
+      <view class="value">目标院校</view>
+      <navigator class="content" url="/pages/indexes/indexes" hover-class="none">
+        <text class="text-grey">请选择</text>
+        <text class="cuIcon-right text-grey"></text>
+      </navigator>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">目标专业</view>
+      <view class="value">目标专业</view>
+      <navigator class="content" url="/pages/indexes/indexes" hover-class="none">
+        <text class="text-grey">请选择</text>
+        <text class="cuIcon-right text-grey"></text>
+      </navigator>
+    </view>
+    <view class="cu-form-group">
+		  <view class="title">手机号码</view>
+		  <input placeholder="输入框"></input>
+		  <view class="cu-capsule radius">
+			  <view class="cu-tag bg-blue">
+				  +86
+			  </view>
+			  <view class="cu-tag line-blue">
+				  中国大陆
+			  </view>
+		  </view>
+	  </view>
+  </form>
+</scroll-view>

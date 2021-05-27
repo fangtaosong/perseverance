@@ -1,0 +1,14 @@
+/* miniprogram/rank/rank.wxss */
+.cu-avatar{
+  position: absolute;
+  left:80rpx;
+}
+.content{
+  position: absolute;
+
+  left: 200rpx;
+}
+.ONE{
+  position: absolute;
+  left: 30rpx;
+}

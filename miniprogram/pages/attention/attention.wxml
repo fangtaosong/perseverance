@@ -1,0 +1,54 @@
+<!--pages/attention/attention.wxml-->
+
+<view class='all' >
+  <image class="background_image" src="{{background}}" mode="aspectFill"></image>
+  <view class="whole" >
+    <view class="view_logo"> 
+      <image src="{{school.logo}}" class="cen_logo" mode="widthFix"></image>
+    </view>
+    <view class="time_clock">
+        <view class="clock_zone">
+          <view class="zhuanzhu">
+            <view class="text_01 text-black text-bold">专注时长</view>
+          </view>
+          <view class="shichang text-black text-bold">{{whole_time}}分钟</view>
+        </view>
+    </view>
+  </view>
+  <view class="lunbotu">
+  <!-- <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{movies}}" wx:for-index="index">  
+        <swiper-item >  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+    </swiper> -->
+  </view>
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <!-- <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff"> -->
+  <swiper-item wx:for="{{school.sight}}" wx:key="key" class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{school.sight[index]}}" mode="aspectFill" ></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="flex solid-bottom padding justify-around">
+  <button class="left" id="btn">设置</button>
+  <button class="center" id="btn" bindtap="time_on">开始</button>
+    <button class="right" id="btn" bindtap="rank">排行榜</button>
+</view>
+  <!-- <view class="button_zone">
+    <view class="left_button">
+      <button class="left" id="btn">设置</button>
+    </view>
+    <view class="center_button">
+      <button class="center" id="btn" bindtap="time_on">开始
+      </button>
+    </view>
+    <view class="right_button">
+      <button class="right" id="btn">排行榜</button>
+    </view>
+  </view> -->
+
+</view>

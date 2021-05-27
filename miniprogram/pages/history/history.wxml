@@ -1,0 +1,14 @@
+<!--pages/history/history.wxml-->
+<cu-custom isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">浏览记录</view>
+</cu-custom>
+<import src="../posts/post-item/post-item-template.wxml" />
+<view>
+<block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+  <!--//template-->
+  <view catchtap="onPostTap" data-postId="{{item.postId}}">
+    <template is="postItem" data="{{...item}}"/>
+  </view>
+</block>
+</view>

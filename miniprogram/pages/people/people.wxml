@@ -1,0 +1,44 @@
+<!--pages/people/people.wxml-->
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">用户</view>
+</cu-custom>
+<scroll-view scroll-y class="scrollPage">
+  <!-- 用户 openid -->
+  <view class="UCenter-bg" >
+    <image src="{{background}}" class="png" mode="widthFix"></image>
+    <view class="cu-avatar xl round margin-left z">
+    <open-data class="touxiang" type="userAvatarUrl"></open-data></view>
+    <!-- <view class="cu-avatar xl round margin-left" style="background-image:url({{avatarUrl}});"></view> -->
+   
+    <open-data type="userNickName" class="text-xl z">{{nickName}}</open-data>
+    <image src="https://7265-revolver-xr3cc-1300594244.tcb.qcloud.la/fangtaosong/wave.gif?sign=1de6d19be8f89f6642da6231bb0cee45&t=1621754910" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="goal" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">我的目标</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/history/history" hover-class="none">
+        <text class="cuIcon-timefill text-green"></text>
+        <text class="text-grey">浏览历史</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+
+  </view>
+  <view class="cu-tabbar-height"></view>
+  
+
+</scroll-view>
+

@@ -1,0 +1,40 @@
+/* pages/mygoal/mygoal.wxss */
+/**index.wxss**/
+
+.UCenter-bg {
+  background-image: url(https://hackwork.oss-cn-shanghai.aliyuncs.com/lesson/weapp/4/bg.png);
+  background-size: cover;
+  height: 350rpx;
+  display: flex;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+}
+.touxiang{
+  border-radius: 50%;
+  overflow:hidden;
+  display: block;  
+  width: 128rpx;
+  height:128rpx
+}
+.text-xl{
+  padding-left: 20rpx;
+  font-size: 50rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

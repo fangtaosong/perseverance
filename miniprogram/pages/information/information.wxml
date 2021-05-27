@@ -1,0 +1,65 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	
+	<view slot="content">资讯</view>
+</cu-custom>
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+ 
+  <swiper-item wx:for="{{school.sight}}"  wx:key="key">
+    <!-- <view class="swiper-item">
+      <image src="{{school.sight[index]}}" mode="aspectFill" ></image>
+    </view> -->
+    <!-- <image src="{{item}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image> -->
+    <image src="{{school.sight[index]}}" mode="aspectFill" ></image>
+  </swiper-item>
+</swiper>
+
+<view class="bts">
+ <button class='btn1' open-type='openSetting' bindtap='go1'>
+    <image class='btnImg' src='cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/p4.png'></image>
+    <view>院校库</view>
+ </button>
+
+ <button class='btn1' bindtap='go2'>
+    <image class='btnImg' src='cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/p2.png'></image>
+    <view>招生简章</view>
+ </button>
+
+ <button class='btn1'bindtap='go3'>
+    <image class='btnImg' src='cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/p3.png'></image>
+    <view>新闻资讯</view>
+ </button>
+
+
+ <!-- <button class='btn1' open-type='contact'> -->
+ <button class='btn1' bindtap='go4'>
+    <image class='btnImg' src='cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/p1.png'></image>
+    <view>我的关注</view>
+ </button>
+</view>
+<import src="../tops/top-item/top-item-template.wxml" />
+
+<view>
+ <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+  <!--//template-->
+  <view catchtap="onPostTap" data-postId="{{item.postId}}">
+    <template is="postItem" data="{{...item}}"/>
+  </view>
+</block>
+</view>
+<!-- <view class="news padding" >
+  <view class="pubtitle " >
+    <view class="txt">新闻头条</view>
+    </view>
+    <view class="main" >
+      <navigator class="mitem"  wx:key="key" wx:for="{{5}}">
+        <view class="pic " >
+          <image src="cloud://revolver-xr3cc.7265-revolver-xr3cc-1300594244/zhangran/images/pp3.jpg"></image>
+        </view>
+        <view class="txt " >
+          <view class="title"> zhangranzhangranzhangranzhangranzhangranzhangranzhangran</view>
+          <view class="info">来源：新闻联播<text space="ensp"> - </text>2021-04-08</view>
+        </view>
+        </navigator>
+  </view>
+</view> -->
+

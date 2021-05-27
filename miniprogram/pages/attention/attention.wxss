@@ -1,0 +1,171 @@
+/* pages/attention/attention.wxss */
+.background_image
+{
+  width: 100%;
+  height:100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+  opacity:0.49
+}
+.whole{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.view_logo{
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 73rpx;
+  position: absolute; 
+}
+.cen_logo{
+  width: 173rpx;
+  
+}
+.clock_zone
+{
+  
+  position: absolute;
+  width: 300rpx;
+  height:160rpx;
+  left:80rpx;
+  background-color:#ffffff;
+  top:300rpx;
+  opacity:0.8
+}
+.text_01{
+  padding-top: 5rpx;
+  align-items: center;
+  text-align:center;
+}
+
+.shichang{
+  text-align:center;
+  padding-top: 20rpx;
+}
+.time_clock{
+  
+  height: 500rpx;
+  width: 750rpx;
+}
+.lunbotu{
+  margin-top: 500rpx;
+  align-items: center;
+  flex-direction: column;
+
+}
+.swiper{
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  height: 500rpx;
+  align-items: center;
+  
+}
+.swiper-item{
+  text-align:center;
+  width: 750rpx;
+  
+}
+.slide-image{
+  width: 100%;
+  border-radius:20rpx;
+  
+  
+}
+.button_zone{
+  display: flex;
+  height:500rpx;
+  width: 100%;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  
+}
+.left_button{
+  width: 33.33%;
+  
+}
+.center_button{
+  
+  width: 33.33%;
+}
+.right_button{
+  
+  width: 33.33%;
+}
+.left{
+  width: 33.33%;
+  border-radius:20rpx;
+  width: 150rpx;
+  height:150rpx;
+  line-height: 150rpx;
+  border-radius:200px;
+  margin-top: 175rpx;
+  font-size:18px;
+  border: none;
+}
+.center{
+  width: 33.33%;
+  margin-top: 150rpx;
+  /* align-items: center;
+  justify-content: center; */
+  width: 200rpx;
+  height:200rpx;
+  line-height: 200rpx;
+  border-radius:200px;
+  font-size: 24px;
+  
+}
+
+.right{
+  width: 33.33%;
+  margin-top: 175rpx;
+  width: 150rpx;
+  height:150rpx;
+  line-height: 150rpx;
+  border-radius:200px;
+  font-size:18px
+  
+}
+#btn{
+  background:linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  
+  color: #fff;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+  7px 7px 20px 0px rgba(0, 0, 0, .1),
+  4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+
+#btn::before{
+  position:absolute;
+  content: '';
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 0;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  z-index: -1;
+}
+
+#btn:hover::before{
+  top: 0;
+    height: 100%;
+}
+
+#btn:active{
+  top: 2px;
+}

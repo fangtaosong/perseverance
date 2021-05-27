@@ -1,0 +1,28 @@
+<!--miniprogram/rank/rank.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">排行榜</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" wx:for="{{card}}" wx:key="key" bindtap="tabSelect" data-id="{{index}}">
+      {{item.text}}
+    </view>
+  </view>
+</scroll-view>
+<view class=" menu-avatar cu-list"  >
+  <view class="cu-item" wx:for="{{user}}" wx:key="key" wx:for-index="goodIndex"> 
+    <view class="ONE">{{goodIndex+1}}</view>
+      <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}})"></view>
+      <view class="content">
+        {{item.nickName}}
+      </view> {{fn.change(item.time)}}分钟
+      <wxs module="fn">
+        module.exports = {
+            change: function(str){
+              return (str/60+1).toFixed(2);
+       }
+      }</wxs>
+    </view> 
+    
+</view>

@@ -1,0 +1,65 @@
+{
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "pages": [
+    "pages/attention/attention",
+    "pages/information/information",
+    "pages/people/people",
+    "pages/Login/Login",
+    "pages/time/time",
+    "pages/mygoal/mygoal",
+    "pages/indexes/indexes",
+    "pages/history/history",
+    "rank/rank/rank",
+    "pages/posts/post",
+    "pages/posts/post-item/post-item-template",
+    "pages/posts/post-detail/post-detail",
+
+    "pages/reports/report",
+    "pages/reports/report-item/report-item-template",
+    "pages/reports/report-detail/report-detail",
+
+    "pages/tops/top",
+    "pages/tops/top-item/top-item-template",
+    "pages/tops/top-detail/top-detail",
+
+    "pages/follows/follow",
+    "pages/follows/follow-item/follow-item-template",
+    "pages/follows/follow-detail/follow-detail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "考研宝",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/专注 (1).png",
+        "iconPath": "images/专注.png",
+        "pagePath": "pages/attention/attention",
+        "text": "专注"
+      },
+      {
+        "selectedIconPath": "images/资讯 (1).png",
+        "iconPath": "images/资讯.png",
+        "pagePath": "pages/information/information",
+        "text": "资讯"
+      },
+      {
+        "selectedIconPath": "images/我 的 (1).png",
+        "iconPath": "images/我 的.png",
+        "pagePath": "pages/people/people",
+        "text": "我的"
+      }
+    ]
+  }
+}

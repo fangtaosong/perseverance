@@ -1,0 +1,11 @@
+@import "report-item/report-item-template.wxss";
+
+ swiper{
+  width:100%;
+  height:600rpx;
+ }
+ /*less sass*/
+ swiper image{
+  width:100%;
+  height:600rpx;
+ }
